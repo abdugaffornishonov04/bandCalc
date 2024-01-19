@@ -19,10 +19,18 @@ body {
   justify-content: center;
   height: 100vh;
 
+  @media (max-width:430px){
+    height: auto;
+  }
+
   h1 {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 20px;
     color: #E31738;
+
+    @media (max-width:430px){
+      font-size: 35px;
+    }
   }
 
   .main-form {
@@ -31,6 +39,13 @@ body {
     row-gap: 15px;
     column-gap: 15px;
     position: relative;
+
+    @media (max-width:430px) {
+      row-gap: 10px;
+      column-gap: 10px;
+    }
+
+
 
     .input-groups {
       width: 170px;
@@ -43,6 +58,10 @@ body {
 
       border-radius: 10px;
       padding: 5px 20px;
+
+      @media (max-width:430px) {
+        width: 100%;
+      }
 
 
 
