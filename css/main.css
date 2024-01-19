@@ -19,17 +19,19 @@ body {
 }
 @media (max-width: 430px) {
   .main-wrapper {
+    margin-top: 100px;
     height: auto;
   }
 }
 .main-wrapper h1 {
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   color: #E31738;
 }
 @media (max-width: 430px) {
   .main-wrapper h1 {
     font-size: 35px;
+    margin-bottom: 30px;
   }
 }
 .main-wrapper .main-form {
