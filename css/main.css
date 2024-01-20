@@ -51,8 +51,8 @@ body {
   }
 }
 .main-wrapper .main-form .input-groups {
-  width: 170px;
-  height: 140px;
+  width: 200px;
+  height: 160px;
   background-color: #fff;
   box-shadow: 0px 0px 20px -1px #ddd;
   -webkit-box-shadow: 0px 0px 20px -1px #ddd;
@@ -143,4 +143,31 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media (max-width: 430px) {
+  footer {
+    margin-top: 150px;
+    flex-direction: column;
+  }
+}
+footer p {
+  color: rgba(0, 0, 0, 0.5);
+}
+footer a {
+  color: #E31738;
+  text-decoration: none;
+}
+@media (max-width: 430px) {
+  footer a {
+    margin: 8px;
+  }
 }
