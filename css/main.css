@@ -98,7 +98,8 @@ body {
   font-size: 20px;
   position: absolute;
   bottom: -70px;
-  left: 29%;
+  left: 50%;
+  transform: translateX(-50%);
   box-shadow: 0px 0px 20px -1px #ddd;
   -webkit-box-shadow: 0px 0px 20px -1px #ddd;
   -moz-box-shadow: 0px 0px 20px -1px #ddd;
