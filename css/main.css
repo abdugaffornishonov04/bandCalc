@@ -62,7 +62,7 @@ body {
 }
 @media (max-width: 430px) {
   .main-wrapper .main-form .input-groups {
-    width: 190px;
+    width: 180px;
     height: 160px;
   }
 }
