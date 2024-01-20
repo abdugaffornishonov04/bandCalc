@@ -1,25 +1,6 @@
-// let form = document.querySelector( '.main-form' );
-
-// form.addEventListener( 'submit', function ( e ) {
-//   e.preventDefault();
-
-//   let listeningValue = document.querySelector( '.l-input' ).value;
-//   let readingValue = document.querySelector( '.r-input' ).value;
-//   let writingValue = document.querySelector( '.w-input' ).value;
-//   let speakingValue = document.querySelector( '.s-input' ).value;
-
-//   let listeningIg = document.querySelector( ".listening-ig" );
-//   let readingIg = document.querySelector( ".reading-ig" );
-//   let writingIg = document.querySelector( ".writing-ig" );
-//   let speakingIg = document.querySelector( ".speaking-ig" );
-
-//   console.log( 'Listening:', listeningValue );
-//   console.log( 'Reading:', readingValue );
-//   console.log( 'Writing:', writingValue );
-//   console.log( 'Speaking:', speakingValue );
-// } );
-
 let form = document.querySelector( '.main-form' );
+let bandScoreWindow = document.querySelector(".bandscore-window-none");
+
 
 form.addEventListener( 'submit', function ( e ) {
   e.preventDefault();
@@ -56,8 +37,25 @@ form.addEventListener( 'submit', function ( e ) {
     return; 
   }
 
-  console.log( 'Listening:', listeningValue );
-  console.log( 'Reading:', readingValue );
-  console.log( 'Writing:', writingValue );
-  console.log( 'Speaking:', speakingValue );
-} );
+  // console.log( 'Listening:', listeningValue );
+  // console.log( 'Reading:', readingValue );
+  // console.log( 'Writing:', writingValue );
+  // console.log( 'Speaking:', speakingValue );
+
+  function roundToNearestHalf( number ) {
+    return Math.round( number * 2 ) / 2;
+  }
+  
+
+  let overallScore = ( +listeningValue + +readingValue + +writingValue + +speakingValue ) / 4;
+  let totalScore = roundToNearestHalf( overallScore )
+
+  setTimeout(() => {
+    bandScoreWindow.classList.add( "bandscore-window" );
+
+    let bandscoreWindowP = document.querySelector( ".bandscore-window p" );
+    let bandscoreWindowButton = document.querySelector( ".bandscore-window button" );
+
+    bandscoreWindowP.textContent = totalScore;
+  }, 500)
+} );  
