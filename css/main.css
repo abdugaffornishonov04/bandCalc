@@ -132,18 +132,13 @@ body {
   font-size: 90px;
 }
 .bandscore-window button {
-  width: 80px;
-  height: 30px;
   border: none;
-  background-color: #fff;
-  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
   font-family: "Roboto";
-  color: #E31738;
+  text-decoration: underline;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+  font-size: 16px;
 }
 
 footer {

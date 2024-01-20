@@ -104,7 +104,7 @@ body {
       font-weight: 400;
       font-size: 20px;
 
-    position: absolute;
+      position: absolute;
       bottom: -70px;
       left: 50%;
       transform: translateX(-50%);
@@ -147,22 +147,17 @@ body {
   }
 
   button {
-    width: 80px;
-    height: 30px;
     border: none;
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
     font-family: "Roboto";
-    color: #E31738;
+    text-decoration: underline;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+    font-size: 16px;
   }
 }
 
-footer{
+footer {
   width: 100%;
   // border-top: 0.2px solid #E31738;
   display: flex;
@@ -171,20 +166,20 @@ footer{
   padding-top: 10px;
   padding-bottom: 10px;
 
-  @media (max-width:430px){
+  @media (max-width:430px) {
     margin-top: 150px;
     flex-direction: column;
   }
 
-  p{
+  p {
     color: rgba(0, 0, 0, 0.5);
   }
 
-  a{
+  a {
     color: #E31738;
     text-decoration: none;
 
-    @media (max-width:430px){
+    @media (max-width:430px) {
       margin: 8px;
     }
   }
@@ -192,3 +187,4 @@ footer{
 
 // some style changes
 // great in responsive 
+// everyth is alright
