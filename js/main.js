@@ -1,5 +1,5 @@
 let form = document.querySelector( '.main-form' );
-let bandScoreWindow = document.querySelector(".bandscore-window-none");
+let bandScoreWindow = document.querySelector( ".bandscore-window-none" );
 
 
 form.addEventListener( 'submit', function ( e ) {
@@ -34,7 +34,7 @@ form.addEventListener( 'submit', function ( e ) {
 
   if ( listeningValue.trim() === "" || readingValue.trim() === "" || writingValue.trim() === "" || speakingValue.trim() === "" ) {
     console.log( "Please fill in all the required inputs." );
-    return; 
+    return;
   }
 
   // console.log( 'Listening:', listeningValue );
@@ -45,17 +45,24 @@ form.addEventListener( 'submit', function ( e ) {
   function roundToNearestHalf( number ) {
     return Math.round( number * 2 ) / 2;
   }
-  
+
 
   let overallScore = ( +listeningValue + +readingValue + +writingValue + +speakingValue ) / 4;
   let totalScore = roundToNearestHalf( overallScore )
 
-  setTimeout(() => {
+  setTimeout( () => {
     bandScoreWindow.classList.add( "bandscore-window" );
 
     let bandscoreWindowP = document.querySelector( ".bandscore-window p" );
-    let bandscoreWindowButton = document.querySelector( ".bandscore-window button" );
 
     bandscoreWindowP.textContent = totalScore;
-  }, 500)
+
+    let bandscoreWindowButton = document.querySelector( ".bandscore-window button" );
+
+
+    bandscoreWindowButton.addEventListener( "click", () => {
+      location.reload();
+    } )
+  }, 600 )
+
 } );  

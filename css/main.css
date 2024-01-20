@@ -137,4 +137,8 @@ body {
   font-family: "Roboto";
   color: #E31738;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
